@@ -49,7 +49,12 @@
 
                     done();
                 }, (error) => {
+                    debugger;
                     this.notify(this.$t('general.load_failed'), 'negative')
+                    if (error.status == 401)
+                        this.$router.push('/auth/login');
+                    else
+                        this.$refs['infiniteScroll'].stop();
                     done();
                 });
             }

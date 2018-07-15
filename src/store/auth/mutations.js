@@ -2,6 +2,6 @@
 export const someMutation = (state) => {}
  */
 
-export const setAuth = (state, auth) => {
-    state.auth = auth
+export const setAuth = (state, headers) => {
+    state.auth = headers['x-authorization-bearer']
 }

@@ -22,7 +22,9 @@ axios.interceptors.request.use((requestConfig) => {
 axios.interceptors.response.use(null, (error) => {
     console.log('axios error', error)
     if (error.response.status == 401) {
-        //return Promise.reject(error.response)
+        /*debugger;
+        this.$router.push('/auth/login');*/
+        return Promise.reject(error.response)
         //store.commit('auth/LOGOUT')
     } else {
         return Promise.reject(error.response)

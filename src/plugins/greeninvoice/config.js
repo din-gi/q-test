@@ -18,7 +18,7 @@ let baseConfig = {
     },
     local: {
         api: {
-            baseUrl: "https://test.d.greeninvoice.co.il/api/v1"
+            baseUrl: "https://local.greeninvoice.co.il/api/v1"
         }
     },
     staging: {
