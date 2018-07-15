@@ -1,0 +1,25 @@
+/* Helper classes */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* Login */
+.q-if-dark.q-if:before {
+  color: #fff !important;
+}
+
+.q-if-dark .q-if-label {
+  color: #fff !important;
+}
+
+/* Side-menu */
+.profile-name {
+  text-align: center;
+}
+
+/* General */
+.q-page-sticky .q-btn-round {
+  height: 3.5rem;
+  width: 3.5rem;
+}
