@@ -32,8 +32,17 @@ module.exports = function (ctx) {
         },
         devServer: {
             // https: true,
-            // port: 8080,
-            open: true // opens browser window automatically
+            port: 9092,
+            open: true,
+	        proxy: {
+		        '/api': {
+			        target: 'https://test.d.greeninvoice.co.il/api/v1',
+			        changeOrigin: true,
+			        pathRewrite: {
+				        '^/api': ''
+			        }
+		        }
+	        }
         },
         // framework: 'all' --- includes everything; for dev only!
         framework: {

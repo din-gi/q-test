@@ -52,7 +52,7 @@
                 else {
                     this.load(this.$t('user.logging_in'))
                     this.$services.Users.login(this.payload).then((response) => {
-                        debugger;
+                    	console.log(response)
                         //this.$store.commit('auth/setAuth', response.data)
                         this.$store.commit('user/setUser', response.data)
                         this.load(false);
